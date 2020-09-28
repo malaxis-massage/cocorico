@@ -46,7 +46,7 @@ class DateFormatFunction extends FunctionNode
      */
     public function getSql(SqlWalker $sqlWalker)
     {
-        return 'DATE_FORMAT (' . $sqlWalker->walkArithmeticExpression(
+        return 'DATE_FORMAT(' . $sqlWalker->walkArithmeticExpression(
             $this->dateExpression
         ) . ',' . $sqlWalker->walkStringPrimary($this->formatChar) . ')';
     }
